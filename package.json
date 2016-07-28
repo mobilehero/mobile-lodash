@@ -1,7 +1,7 @@
 {
   "name": "@mobile/lodash",
   "description": "Repackaged version of lodash for mobile",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "keywords": [
     "modules",
     "stdlib",
@@ -13,7 +13,7 @@
   "icon": "https://lodash.com/icon.svg",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lodash/lodash.git"
+    "url": "git+https://github.com/mobilehero/mobile-lodash.git"
   },
   "license": "MIT",
   "main": "./lodash.js",
