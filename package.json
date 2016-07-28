@@ -1,7 +1,7 @@
 {
   "name": "@mobile/lodash",
   "description": "Repackaged version of lodash for mobile",
-  "version": "2.4.2",
+  "version": "3.0.0",
   "keywords": [
     "modules",
     "stdlib",
@@ -19,7 +19,8 @@
   "main": "./lodash.js",
   "readmeFilename": "README.md",
   "scripts": {
-    "download": "download https://raw.githubusercontent.com/lodash/lodash/%npm_package_version%/dist/lodash.js --out .",
+    "download2": "download https://raw.githubusercontent.com/lodash/lodash/%npm_package_version%/dist/lodash.js > lodash.js",
+    "download": "download https://raw.githubusercontent.com/lodash/lodash/%npm_package_version%/lodash.src.js > lodash.js",
     "commit": "git add -A && git commit -m \":checkered_flag: v%npm_package_version% :heavy_minus_sign: Repackaging from: %npm_package_source_url%\"",
     "tag": "git tag v%npm_package_version%",
     "push": "git push && git push --tags",
