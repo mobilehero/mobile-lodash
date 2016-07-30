@@ -1,7 +1,7 @@
 {
   "name": "@mobile/lodash",
   "description": "Repackaged version of lodash for mobile",
-  "version": "4.11.1",
+  "version": "4.11.2",
   "keywords": [
     "modules",
     "stdlib",
