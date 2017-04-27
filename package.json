@@ -1,66 +1,73 @@
 {
-  "name": "@mobile/lodash",
-  "description": "Repackaged version of lodash for mobile",
-  "version": "4.17.2",
-  "keywords": [
-    "modules",
-    "stdlib",
-    "util",
-    "lodash",
-    "mobile"
-  ],
-  "homepage": "https://lodash.com/",
-  "icon": "https://lodash.com/icon.svg",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mobilehero/mobile-lodash.git"
-  },
-  "license": "MIT",
-  "main": "./lodash.js",
-  "readmeFilename": "README.md",
-  "scripts": {
-    "download": "download https://raw.githubusercontent.com/lodash/lodash/$npm_package_version/dist/lodash.js > lodash.js",
-    "download2": "download https://raw.githubusercontent.com/lodash/lodash/$npm_package_version/lodash.src.js > lodash.js",
-    "commit": "git add -A && git commit -m \":checkered_flag: v$npm_package_version :heavy_minus_sign: Repackaging from: $npm_package_source_url\"",
-    "tag": "git tag v$npm_package_version",
-    "push": "git push && git push --tags",
-    "update:version": "npm --no-git-tag-version version --",
-    "update:download": "npm run update:version --",
-    "update:commit": "npm run update:version --",
-    "update:push": "npm run update:version --",
-    "update:publish": "npm run update:version --",
-    "postupdate:download": "npm run download",
-    "postupdate:commit": "npm run commit && npm run tag",
-    "postupdate:push": "npm run postupdate:download && npm run postupdate:commit && npm run push",
-    "postupdate:publish": "npm run postupdate:push && npm publish"
-  },
-  "source": {
-    "name": "lodash",
-    "url": "https://github.com/lodash/lodash"
-  },
-  "author": {
-    "email": "john.david.dalton@gmail.com",
-    "name": "John-David Dalton",
-    "url": "http://allyoucanleet.com/"
-  },
-  "bugs": {
-    "url": "https://github.com/lodash/lodash/issues"
-  },
-  "maintainers": [
-    {
-      "email": "john.david.dalton@gmail.com",
-      "name": "jdalton"
-    },
-    {
-      "email": "mathias@qiwi.be",
-      "name": "mathias"
-    },
-    {
-      "email": "blaine.bublitz@gmail.com",
-      "name": "phated"
-    }
-  ],
-  "devDependencies": {
-    "download-cli": "^1.0.1"
-  }
+	"name": "@mobile/lodash",
+	"description": "Repackaged version of lodash for mobile",
+	"version": "4.17.2",
+	"keywords": [
+		"modules",
+		"stdlib",
+		"util",
+		"lodash",
+		"mobile"
+	],
+	"homepage": "https://lodash.com/",
+	"icon": "https://lodash.com/icon.svg",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mobilehero/mobile-lodash.git"
+	},
+	"license": "MIT",
+	"main": "./lodash.js",
+	"readmeFilename": "README.md",
+	"scripts": {
+		"download": "download https://raw.githubusercontent.com/lodash/lodash/$npm_package_version/dist/lodash.js > lodash.js",
+		"download2": "download https://raw.githubusercontent.com/lodash/lodash/$npm_package_version/lodash.src.js > lodash.js",
+		"commit": "git add -A && git commit -m \":checkered_flag: v$npm_package_version :heavy_minus_sign: Repackaging from: $npm_package_source_url\"",
+		"tag": "git tag v$npm_package_version",
+		"push": "git push && git push --tags",
+		"update:version": "npm --no-git-tag-version version --",
+		"update:download": "npm run update:version --",
+		"update:commit": "npm run update:version --",
+		"update:push": "npm run update:version --",
+		"update:publish": "npm run update:version --",
+		"postupdate:download": "npm run download",
+		"postupdate:commit": "npm run commit && npm run tag",
+		"postupdate:push": "npm run postupdate:download && npm run postupdate:commit && npm run push",
+		"postupdate:publish": "npm run postupdate:push && npm publish"
+	},
+	"source": {
+		"name": "lodash",
+		"url": "https://github.com/lodash/lodash"
+	},
+	"author": {
+		"email": "john.david.dalton@gmail.com",
+		"name": "John-David Dalton",
+		"url": "http://allyoucanleet.com/"
+	},
+	"bugs": {
+		"url": "https://github.com/lodash/lodash/issues"
+	},
+	"maintainers": [ {
+			"email": "john.david.dalton@gmail.com",
+			"name": "jdalton"
+		},
+		{
+			"email": "mathias@qiwi.be",
+			"name": "mathias"
+		},
+		{
+			"email": "blaine.bublitz@gmail.com",
+			"name": "phated"
+		}
+	],
+	"devDependencies": {
+		"download-cli": "^1.0.1"
+	},
+	"mobile": {
+		"modules": {
+			"fallback": [ {
+				"id": "lodash",
+				"path": "./lodash"
+			} ]
+		}
+	}
 }
