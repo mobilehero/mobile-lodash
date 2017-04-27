@@ -64,6 +64,10 @@
 	},
 	"mobile": {
 		"modules": {
+			"alias": [ {
+				"id": "alloy/underscore",
+				"path": "./lodash"
+			} ],
 			"fallback": [ {
 				"id": "lodash",
 				"path": "./lodash"
