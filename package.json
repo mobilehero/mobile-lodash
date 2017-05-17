@@ -46,7 +46,7 @@
 	"bugs": {
 		"url": "https://github.com/lodash/lodash/issues"
 	},
-	"maintainers": [ {
+	"maintainers": [{
 			"email": "john.david.dalton@gmail.com",
 			"name": "jdalton"
 		},
@@ -64,14 +64,9 @@
 	},
 	"mobile": {
 		"modules": {
-			"alias": [ {
-				"id": "alloy/underscore",
-				"path": "./lodash"
-			} ],
-			"fallback": [ {
-				"id": "lodash",
-				"path": "./lodash"
-			} ]
+			"fallback": {
+				"lodash": "./lodash"
+			}
 		}
 	}
 }
