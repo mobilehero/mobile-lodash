@@ -1,7 +1,8 @@
 {
 	"name": "@mobile/lodash",
+	"alias": "lodash",
 	"description": "Repackaged version of lodash for mobile",
-	"version": "4.17.2",
+	"version": "4.17.3",
 	"keywords": [
 		"modules",
 		"stdlib",
@@ -24,7 +25,7 @@
 		"commit": "git add -A && git commit -m \":checkered_flag: v$npm_package_version :heavy_minus_sign: Repackaging from: $npm_package_source_url\"",
 		"tag": "git tag v$npm_package_version",
 		"push": "git push && git push --tags",
-		"update:version": "npm --no-git-tag-version version --",
+		"update:version": "npm --no-git-tag-version --allow-same-version version --",
 		"update:download": "npm run update:version --",
 		"update:commit": "npm run update:version --",
 		"update:push": "npm run update:version --",
@@ -46,7 +47,8 @@
 	"bugs": {
 		"url": "https://github.com/lodash/lodash/issues"
 	},
-	"maintainers": [{
+	"maintainers": [
+		{
 			"email": "john.david.dalton@gmail.com",
 			"name": "jdalton"
 		},
@@ -60,13 +62,20 @@
 		}
 	],
 	"devDependencies": {
-		"download-cli": "^1.0.1"
+		"download-cli": "^1.0.1",
+		"eslint": "^4.14.0",
+		"eslint-plugin-jsdoc": "^3.3.0",
+		"eslint-plugin-promise": "^3.6.0"
 	},
 	"mobile": {
 		"modules": {
 			"fallback": {
 				"lodash": "./lodash"
 			}
-		}
+		},
+		"alias": "lodash"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }
